@@ -66,48 +66,96 @@ En las tablas identifiqué datos faltantes, inconsistentes y errores que fueron 
 **1 Acceso a Internet fijo por rango de velocidad por provincia** (Objetivo 2)
 - Encabezados Promovidos (los títulos se encontraban en la primera fila)
 - Cambio del tipo de dato a tipo numérico de las columnas con Mbps
+- Agregado de una columna personalizada con la fecha por año y trimestre 
+(Query utilizada:"1/"&Number.ToText([Trimestre]*2+([Trimestre]-2))&"/"&Number.ToText([Año])]).
+
+**2  Acceso a Internet fijo por tecnologia y provincia** (Objetivo 3)
+- Encabezados Promovidos (los títulos se encontraban en la primera fila)
+- Cambio del tipo de dato a tipo numérico
+- Errores quitados y reemplazados de la columna año y trimestre.
 - Agregado de una columna personalizada con la fecha por año y trimestre.
 
-**2  Acceso a Internet fijo por tecnologia y provincia**
+**3  Acceso a Internet, cada 100 hogares por provincia** (Objetivo 1)
+- Encabezados Promovidos (los títulos se encontraban en la primera fila)
+- Cambio del tipo de dato a tipo numérico
+- Agregado de una columna personalizada con la fecha por año y trimestre.
+
+**4  Accesos a Internet fijo por tecnología y localidad** (Objetivo 3) 
+- Encabezados Promovidos (los títulos se encontraban en la primera fila)
+- Valores reemplazados : - 0 por 0
+- Cambio del tipo de dato a tipo numérico
+- Se eliminó una columna con datos vacíos
+- Errores reemplazados y filas ordenadas
+- Agregado de una columna personalizada con la fecha por año y trimestre.
+
+**5  Accesos de internet de banda ancha y dial up por provincia**
+Esta columna la descargué y transformé pero finalmente no fue utilizada para el análisis
+
+**6  Accesos TV por suscripcion y TV satelital** (Objetivo 5)
+- Encabezados Promovidos (los títulos se encontraban en la primera fila)
+
+**7  Calendario**
+Realizada con la siguiente Query: Calendario = CALENDAR("01/01/2014","31/12/2022"), para generar la relación entre los datos de todas las tablas.
+
+**8  Ingresos por la operacion del servicio de internet fijo** (Objetivo 1)
+- Encabezados Promovidos (los títulos se encontraban en la primera fila)
+- Cambio del tipo de dato a tipo numérico
+- Agregado de una columna personalizada con la fecha por año y trimestre.
+
+**9  Listado de localidades con conectividad a internet**(Objetivo 4)
+- Cambio del tipo de dato
+- Encabezados Promovidos (los títulos se encontraban en la primera fila)
+- Agregado de una Columna condicional con el título de conectividad donde se resume si cada localidad por provincia posee o no al menos algún servicio de internet.
+
+**10  Velocidad media de bajada por provincia** (Objetivo 2)
+- Encabezados Promovidos (los títulos se encontraban en la primera fila)
+- Cambio del tipo de dato a tipo numérico
+- Agregado de una columna personalizada con la fecha por año y trimestre.
 
 
- 1. Las filas cuyo único carácter era '?' fueron reemplazados por un campo vacío. 
- 2. Los nombres de las columnas fueron renombrados en español 
- 3. La columna de horas fue uniformada y transformada de formato militar a formato regular
- 4. Extrajimos las palabras clave de las descripciones de los accidentes 
- 5. Creamos una columna de sobrevivientes como resultado de la ecuación 'Total pasajeros a bordo' menos 'Total Fallecidos'
- 6. A partir de la columna 'Fecha' fueron creadas las columnas año, mes y día
- 7. A partir de la columna 'Ruta' fueron creadas las columnas 'Ciudad de Origen' y 'Ciudad destino' 
- 8. A partir de la columna 'Ubicación accidente' fuer creada y transformada la columna 'País'
+### **KPIs**
+- Aumento o disminución de la variación porcentual trimestral del servicio de internet, cada 100 hogares por provincia. 
+- Acceso a Internet cada 100 habitantes por provincia
+- Suma total del Accesos a Internet por provincia
+- Promedio o velocidad media de bajada por provincia
 
-Luego de este proceso de análisis y transformación cargamos los datos en una base de datos para ser consultados por la plataforma de visualización. 
+## *La elección de los gráficos*
 
+*Gráfico de líneas:*
+Fueron seleccionados para el análisis de la evolucion de los datos en el paso del tiempo, así como para realizar una comparación entre los distitntos items:
 
-KPIs
-•	Evaluar el aumento o disminución de la variación porcentual trimestral del servicio de internet, cada 100 hogares por provincia. 
-•	Que sería un servicio de calidad y como es la calidad en cada provincia de acuerdo a la cantidad de mg según el rango
-•	Evaluar el aumento o disminución de la variación porcentual trimestral del servicio de internet, según cada tecnología por provincia y relacionarlo con la calidad y velocidad a internet.
-•	Evaluar el aumento o disminución del consumo de la televisión por suscripción y la televisión satelital.
-•	Determinar el pico en la aceleración de la internet (si es que coincide con la pandemia).
+1 Suma de Accesos por cada 100 hogares por *año y trimestre*.
+
+2 Accesos a Internet fijo por tecnología y provincia por *año y trimestre*.
+
+3 Suma de ingresos por *año y trimestre*.
+
+*Gráfico Circular:* Fueron utiliados para realizar comparativas entre las proporciones en cantidad de accesos por rango de velocidad, y en el otro caso por TV satelital o por suscripcion.
+
+*Gráfico de Barras:* Utilizado para delimitar el top 10 de provincias con menor velocidad media de bajada.
+
+*Mapa de Argentina:* Importé un mapa externo para poder realizar este gráfico. En el podemos ir visualizando geográficamente los datos analizados en la tabla de acceso a internet cada 100 hogares.
+
+*Tabla:* Aquí figuran todas las localidades segun sus provincias, que NO poseen conectividad ni acceso a internet a través de ningun tipo de tecnología.
+
+*Treemap:* Muestra la distribución por provincia a partir de la proporción en tamaño de la cantidad de accesos por localidad que poseen conectividad a internet.
+
+*Tooltip:* Al seleccionar cada Provincia del gráfico Treemap se aparece una ventana con la tabla completa de las localidades de cada una de esas provincias que tienen o no conectividad a internet.
+
+*Filtros*
+La mayoría de los gráficos estan filtrados por año, trimestre y provincia.
+
+## *La paleta de colores, el diseño y la tipografía*
+El diseño está construido sobre la base de tres colores que son el azul, el verde azulado y el rosado. Esta paleta fue extraída del logo de ENACOM y luego utilizada en claros y oscuros para generar distintas combinaciones. El blanco y el gris de los cuadros y el fondo quedan prolijos, buscan generar esa tranquilidad y contraste para que los colores resalten los graficos y la información reelevante. 
+La tipografía es standard (Calibri) en casi todos los casos, normalizando la información para generar armonía, que la letra sea legible y entendible. 
+Los bordes de los graficos y las formas coinciden en los costados, hay una coherencia entre las distitnas páginas. 
+La lectura esta pensada de izquierda a derecha y de arriba a abajo, colocando los filtros al principio a la izquierda para indicar que aquellos modifican el resto de los gráficos, así como los KPIs están ubicados en la parte superiror del dashboard, con información mas importante, general e introductoria, dándole la importancia que necesita.
+
+## Conclusiones 
 
 Se observa que el cable modem y la fibra óptica aumenta.
 
 
 
-## Conclusiones 
 
-En general principales causas que ocasionan accidentes aéreos son las siguientes: 
-1. Error de piloto 
-2. Fallos mecánicos 
-3. Meteorología adversa 
-4. Sabotaje 
-5. Error humano de controlador aéreo o persona en tierra 
-
-En nuestro análisis identificamos que los períodos, regiones y tipo de aeronaves con mayor cantidad de víctimas por accidentes áereos en la historia coinciden con períodos de conflictos bélicos. Con lo cual hay una destacada tendencia negativa que inició en el año 1972, mismo año que registró el mayor número de victimas, hasta la actualidad donde la cantidad de víctimas se ha reducido en un 94%. 
-
-Por último, en el año 2019 se registraron mas de 39 millones de vuelos de los cuales se registraron apenas 13 accidentes aéreos, con lo cual podemos concluir que en la actualidad las probabilidades de morir en un accidentes aéreo es 1 / 3 millones o 0,00003%. 
-
- ## Registro técnico del análisis de datos 
-
-### **Análisis exploratorio de los datos y transformaciones**
 
