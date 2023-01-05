@@ -153,7 +153,15 @@ La lectura esta pensada de izquierda a derecha y de arriba a abajo, colocando lo
 
 ## Conclusiones 
 
-Se observa que el cable modem y la fibra óptica aumenta.
+El acceso a Internet fijo, ha aumentado progresivamente desde el año 2014 y se ha acrecentado especialmente en los últimos años. Podemos razonar a partir de los datos, que la pandemia fue un factor fundamental para esta aceleración en la digitalización de las cosas. No solo fue necesario para comunicarnos con nuestros seres queridos y compartir momentos de oscio, sino también para realizar todas las actividades de estudio y trabajo. 
+
+Asimismo si bien se ha acrecentado la actividad a través de las redes y a tecnología, la brecha entre los que aún no tienen acceso se ha hecho mas grande, siendo urgente así como oportuno, la posibilidad de generar accesos a las localidades que aún no tienen esta posibilidad que son un montón y se expresan en el presente proyecto.
+También podemos observar que en la ubicación geográfica estas oportunidades se dan de manera centralizada entre las provincias de Buenos Aires y Córdoba como las que mas accesos a Internet tienen cada 100 hogares, siendo Tierra del Fuego una excepción pero que por ahí el dato está transgiversado por la cantidad de población en relación a la ocupación del territorio.
+Es una oportunidad para la empresa, facilitar en acceso a internet en estas regiones, así como también mejorar la velocidad de bajada (es decir la calidad de internet) para que el servicio sea mejor en todo el país. Nuevamente las provincias con menor velocidad media de bajada son las mas alejadas geográficamente de Buenos Aires.
+
+Se observa que el cable modem y la fibra óptica aumentan casi a la par, aunque en los últimos trimestres se ve una disminución en el uso de cable modem y reemplazo por fibra óptica que los hogares eligen cada vez mas como tecnología para su conectividad. Es importante para el negocio estar al tanto de esta nueva demanda para poder satisfacer a los usuarios.
+
+La suma de ingresos en lo que refiere a Internet viene en aumento. Finalmente y habiendo realizado una comparación con algunos datos de otras tablas, pude concluir que puede ser una buena idea sumar a estos servicios paquetes o promociones que incluyan suscripciones de TV para seguir impulsando el crecimiento de ambos servicios.
 
 
 
