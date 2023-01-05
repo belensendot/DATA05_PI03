@@ -149,7 +149,7 @@ La mayoría de los gráficos estan filtrados por año, trimestre y provincia.
 El diseño está construido sobre la base de tres colores que son el azul, el verde azulado y el rosado. Esta paleta fue extraída del logo de ENACOM y luego utilizada en claros y oscuros para generar distintas combinaciones. El blanco y el gris de los cuadros y el fondo quedan prolijos, buscan generar esa tranquilidad y contraste para que los colores resalten los graficos y la información reelevante. 
 La tipografía es standard (Calibri) en casi todos los casos, normalizando la información para generar armonía, que la letra sea legible y entendible. 
 Los bordes de los graficos y las formas coinciden en los costados, hay una coherencia entre las distitnas páginas. 
-La lectura esta pensada de izquierda a derecha y de arriba a abajo, colocando los filtros al principio a la izquierda para indicar que aquellos modifican el resto de los gráficos, así como los KPIs están ubicados en la parte superiror del dashboard, con información mas importante, general e introductoria, dándole la importancia que necesita.
+La lectura esta pensada de izquierda a derecha y de arriba a abajo, colocando los filtros al principio a la izquierda para indicar que aquellos modifican el resto de los gráficos, así como los KPIs están ubicados en la parte superior del dashboard, con información mas importante, general e introductoria, dándole la importancia que necesita.
 
 ## Conclusiones 
 
