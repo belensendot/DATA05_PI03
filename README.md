@@ -48,6 +48,8 @@ Posicionarse como un referente internacional en regulaciones y control de las co
 
 ### **Análisis exploratorio de los datos y transformaciones (EDA)**
 
+En primer lugar realicé una seleccion de las tablas que consideré iban a ser eficientes para obtener la información necesaria. A partir de este primer análisis con python pudimos determinar los tipos de datos, así como la cantidad de nulos por filas y columnas, los errores y valores faltantes, los datos sobrantes, aquellos valores que es posible reemplazar como el - 0 por el 0. Pudimos ver la correlacion entre los datos y su distribución, como se relacionan las features entre sí. También identificar la necesidad de normalizacion de las mayúsculas y minúsculas. Desde aqui descargué los datos como archivo csv y desde el power query directamente desde la API también para realizar una comparación de las tablas. Continúo el proceso de limpieza directo desde Power Query.
+
 Descargué los datos proporcionados por la plataforma del Enacom a través de la API directamente a Power Bi para realizar al instante la transformación necesaria con Power Query de las tablas que seleccioné con información entre los años 2014 y 2022:
 
 	1  Acceso a Internet fijo por rango de velocidad por provincia
